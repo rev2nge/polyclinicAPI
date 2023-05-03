@@ -1,0 +1,64 @@
+<header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+  >
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">polyclinic</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
+           [ngClass]="{ show: isExpanded }">
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item"
+              [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/city']">City</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/specialization']">Specialization</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/medic']">Medic</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/polyclinic']">Polyclinic</a>
+          </li>
+        </ul>
+
+        <div>
+          <ul class="nav navbar-nav">
+            <li *ngIf="!loggedin()" class="nav-item">
+              <a class="nav-link" routerLink="user/register"
+                 routeLinkActive="active">
+                Register
+              </a>
+            </li>
+            <li *ngIf="!loggedin()" class="nav-item">
+              <a class="nav-link" routerLink="user/login"
+                 routeLinkActive="active">
+                Login
+              </a>
+            </li>
+            <li *ngIf="loggedin()" class="nav-item">
+               <a class="nav-link" (click)="onLogout()">
+                Logout
+               </a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

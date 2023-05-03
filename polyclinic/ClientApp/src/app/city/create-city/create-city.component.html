@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">
+    Add New City
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)='CreateCity()' #Form="ngForm">
+      <div class="form-group col-12">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" #cityName="ngModel"
+               [(ngModel)] = "CreateCityRequest.name" name="name" required minlength="5">
+        <span *ngIf="!cityName.valid && cityName.touched" class="error-block">
+          <span *ngIf="cityName.errors">Пожалуйста введите имя</span>
+          <!--<span *ngIf="cityName.errors.minlenght">Имя должно иметь не менее 5 символов</span>-->
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <button (click)="CreateCity()" [disabled]="!Form.valid" type="submit" class="btn btn-primary m-2">Save</button>
+        <button type="reset" class="btn btn-primary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<p>
+  <button (click)="onBack()" class="btn btn-primary">Back</button>
+</p>
+

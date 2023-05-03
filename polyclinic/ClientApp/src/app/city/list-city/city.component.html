@@ -1,0 +1,27 @@
+<div class="content__head">
+  <h1>City</h1>
+</div>
+
+<div class="content">
+  <button class="btn btn-primary" routerLink="/create-city">
+    Create
+  </button>
+  <div class="content__container" *ngIf="cities.length">
+    <div class="content__body" *ngFor="let city of cities">
+      <div class="content__item">
+        {{ city.id }}
+      </div>
+      <div class="content__item">
+        {{ city.name }}
+      </div>
+      <div class="content__item">
+        <button class="btn btn-primary" routerLink="/update-city">
+          Update
+        </button>
+        <button class="btn btn-primary" routerLink="/delete-city">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

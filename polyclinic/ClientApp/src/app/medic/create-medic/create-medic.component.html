@@ -1,0 +1,65 @@
+<div class="card">
+  <div class="card-header">
+    Add New polyclinic
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)='onSubmit(Form)' #Form="ngForm">
+      <div class="form-group col-12">
+        <label for="fullname">ФИО</label>
+        <input type="text" class="form-control" #medicFullName="ngModel"
+               ngModel name="fullname" required minlength="5">
+        <span *ngIf="!medicFullName.valid && medicFullName.touched" class="error-block">
+          <span *ngIf="medicFullName.errors">Пожалуйста ФИО</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <label for="price">Цена</label>
+        <input type="text" class="form-control" #medicPrice="ngModel"
+               ngModel name="price" required minlength="5">
+        <span *ngIf="!medicPrice.valid && medicPrice.touched" class="error-block">
+          <span *ngIf="medicPrice.errors">Пожалуйста введите цену</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <label for="phone">Телефон</label>
+        <input type="text" class="form-control" #medicPhone="ngModel"
+               ngModel name="phone" required minlength="5">
+        <span *ngIf="!medicPhone.valid && medicPhone.touched" class="error-block">
+          <span *ngIf="medicPhone.errors">Пожалуйста введите номер телефона</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <label for="experience">Опыт</label>
+        <input type="text" class="form-control" #medicExperience="ngModel"
+               ngModel name="experience" required minlength="5">
+        <span *ngIf="!medicExperience.valid && medicExperience.touched" class="error-block">
+          <span *ngIf="medicExperience.errors">Пожалуйста введите опыт</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <label for="description">Описание</label>
+        <input type="text" class="form-control" #medicDescription="ngModel"
+               ngModel name="description" required minlength="5">
+        <span *ngIf="!medicDescription.valid && medicDescription.touched" class="error-block">
+          <span *ngIf="medicDescription.errors">Пожалуйста введите описание</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <label for="fulldescription">Полное описание</label>
+        <input type="text" class="form-control" #medicFullDescription="ngModel"
+               ngModel name="fulldescription" required minlength="5">
+        <span *ngIf="!medicFullDescription.valid && medicFullDescription.touched" class="error-block">
+          <span *ngIf="medicFullDescription.errors">Пожалуйста введите полное описание</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <button [disabled]="!Form.valid" type="submit" class="btn btn-primary mr-2">Save</button>
+        <button type="reset" class="btn btn-primary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<p>
+  <button (click)="onBack()" class="btn btn-primary">Back</button>
+</p>

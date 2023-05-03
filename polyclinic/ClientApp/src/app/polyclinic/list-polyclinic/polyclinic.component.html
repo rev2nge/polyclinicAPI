@@ -1,0 +1,42 @@
+<div class="content__head">
+  <h1>Polyclinic</h1>
+</div>
+
+<div class="content">
+  <button class="btn btn-primary" routerLink="/create-polyclinic">
+    Create
+  </button>
+  <div class="content__container" *ngIf="polyclinics.length">
+    <div class="content__body" *ngFor="let polyclinic of polyclinics">
+      <div class="content__item">
+        {{ polyclinic.id }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.name }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.cityName }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.address }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.phone }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.photo }}
+      </div>
+      <div class="content__item">
+        <button class="btn btn-primary" routerLink="/details-polyclinic/{{polyclinic.id}}">
+          Details
+        </button>
+        <button class="btn btn-primary" routerLink="/update-polyclinic">
+          Update
+        </button>
+        <button class="btn btn-primary" routerLink="/delete-polyclinic">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

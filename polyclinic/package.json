@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "alertifyjs": "^1.13.1",
+    "ngx-bootstrap": "^10.2.0"
+  }
+}

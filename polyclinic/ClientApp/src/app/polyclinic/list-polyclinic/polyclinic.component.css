@@ -1,0 +1,168 @@
+html {
+  font-size: 14px;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.card {
+  width: 40%;
+}
+
+.col-md-6 {
+  width: 30%;
+}
+
+.col-md-12 {
+  width: 30%;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn-danger {
+  width: auto;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+footer {
+  flex: 0 0 auto;
+  height: 50px;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  align-items: center
+}
+
+.footer-mw {
+  max-width: 1830px;
+}
+
+.container-flex {
+  flex: 1 0 auto;
+  margin: 0px 40px;
+}
+
+.nav-collor {
+  background-color: #B3B3B3;
+}
+
+.nav-item {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.content__head {
+  padding: 0px 0px 20px 20px;
+}
+
+.content__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content__body {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  border: 1px solid;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.content__title {
+  text-align: center;
+  font-family: 'Nunito';
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+}
+
+.content__item {
+  text-align: center;
+}
+
+.content__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.content__btn {
+  display: flex;
+  justify-content: center;
+  padding: 2px 15px;
+  color: black;
+  text-decoration: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.button-create {
+  background-color: #EFEFEF;
+}
+
+.button-edit {
+  background-color: #EFEFEF;
+}
+
+.button-delete {
+  background-color: #EFEFEF;
+}
+
+.shop-header__account {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn {
+  width: 75px;
+}
+
+.imageThumbnail {
+  height: 200px;
+  width: auto;
+}
+
+.shop-header__icons {
+  display: flex;
+}
+
+.btn-primary {
+  margin: 15px 0px;
+}

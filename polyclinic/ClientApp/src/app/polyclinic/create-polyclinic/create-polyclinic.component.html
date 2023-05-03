@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header">
+    Add New Polyclinic
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)='onSubmit(Form)' #Form="ngForm">
+      <div class="form-group col-12">
+        <label for="name">Название</label>
+        <input type="text" class="form-control" #polyclinicName="ngModel"
+               ngModel name="name" required minlength="5">
+        <span *ngIf="!polyclinicName.valid && polyclinicName.touched" class="error-block">
+          <span *ngIf="polyclinicName.errors">Пожалуйста введите название</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <label for="address">Адрес</label>
+        <input type="text" class="form-control" #polyclinicAddress="ngModel"
+               ngModel name="address" required minlength="5">
+        <span *ngIf="!polyclinicAddress.valid && polyclinicAddress.touched" class="error-block">
+          <span *ngIf="polyclinicAddress.errors">Пожалуйста введите адрес</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <label for="phone">Телефон</label>
+        <input type="text" class="form-control" #polyclinicPhone="ngModel"
+               ngModel name="phone" required minlength="5">
+        <span *ngIf="!polyclinicPhone.valid && polyclinicPhone.touched" class="error-block">
+          <span *ngIf="polyclinicPhone.errors">Пожалуйста введите номер телефона</span>
+        </span>
+      </div>
+      <div class="form-group col-12">
+        <button [disabled]="!Form.valid" type="submit" class="btn btn-primary mr-2">Save</button>
+        <button type="reset" class="btn btn-primary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<p>
+  <button (click)="onBack()" class="btn btn-primary">Back</button>
+</p>

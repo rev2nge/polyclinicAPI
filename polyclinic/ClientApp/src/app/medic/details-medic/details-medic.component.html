@@ -1,0 +1,40 @@
+  <div class="content">
+    <div class="content__container" *ngIf="medics.length">
+      <div class="content__body" *ngFor="let medic of medics">
+        <div class="content__item">
+          {{ medic.id }}
+        </div>
+        <div class="content__item">
+          {{ medic.fullname }}
+        </div>
+        <div class="content__item">
+          {{ medic.price }}
+        </div>
+        <div class="content__item">
+          {{ medic.phone }}
+        </div>
+        <div class="content__item">
+          {{ medic.photopath }}
+        </div>
+        <div class="content__item">
+          {{ medic.experience }}
+        </div>
+        <div class="content__item">
+          {{ medic.description }}
+        </div>
+        <div class="content__item">
+          {{ medic.fulldescription }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  Получили город с id {{medicId}}
+  <br /> <br />
+  <button (click)="onSelectNext()" class="btn btn-primary">Select Next Page</button>
+
+  <button routerLink="/details-medic/1" class="btn btn-primary">1</button>
+  <button routerLink="/details-medic/2" class="btn btn-primary">2</button>
+  <button routerLink="/details-medic/3" class="btn btn-primary">3</button>
+  <button routerLink="/details-medic/4" class="btn btn-primary">4</button>
+  <button [routerLink]="['/details-medic', '5']" class="btn btn-primary">5</button>

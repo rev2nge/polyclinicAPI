@@ -1,0 +1,35 @@
+<div class="content">
+  <div class="content__container" *ngIf="polyclinics.length">
+    <div class="content__body" *ngFor="let polyclinic of polyclinics">
+      <div class="content__item">
+        {{ polyclinic.id }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.name }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.cityName }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.address }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.phone }}
+      </div>
+      <div class="content__item">
+        {{ polyclinic.photo }}
+      </div>
+    </div>
+  </div>
+</div>
+
+  Получили город с id {{polyclinicId}}
+<br />
+<br />
+<button (click)="onSelectNext()" class="btn btn-primary">Select Next Page</button>
+
+<button routerLink="/details-polyclinic/1" class="btn btn-primary">1</button>
+<button routerLink="/details-polyclinic/2" class="btn btn-primary">2</button>
+<button routerLink="/details-polyclinic/3" class="btn btn-primary">3</button>
+<button routerLink="/details-polyclinic/4" class="btn btn-primary">4</button>
+<button [routerLink]="['/details-polyclinic', '5']" class="btn btn-primary">5</button>
